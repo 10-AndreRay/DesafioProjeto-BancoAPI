@@ -25,20 +25,20 @@
 ## Rotas:
 Interface de teste: http://localhost:8080/swagger-ui/index.html
 ### Conta Controller:
-HTTP  | Rotas   | Resultado
---------- | ------ | ------
-GET | localhost:8000/contas | Retorna um json com uma lista contendo todas as contas
-GET | localhost:8000/contas/{id} | Retorna uma conta específica;
-POST | localhost:8000/criar| Retorna uma String com o resultado da solicitação
-PUT | localhost:8000/atualizar/{senha} | Retorna uma String com o resultado da solicitação
-DELETE | localhost:8000/deletar/{id}/{senha} | Retorna uma String com o resultado da solicitação
+HTTP  | Rotas | RequestBody Models | Resultado
+--------- | ------ | ------ | ------
+GET | localhost:8000/contas | none | Retorna um json com uma lista contendo todas as contas
+GET | localhost:8000/contas/{id} | none | Retorna uma conta específica;
+POST | localhost:8000/criar | Conta | Retorna uma String com o resultado da solicitação
+PUT | localhost:8000/atualizar/{senha} | Conta | Retorna uma String com o resultado da solicitação
+DELETE | localhost:8000/deletar/{id}/{senha} | none | Retorna uma String com o resultado da solicitação
 
 ### Transações Controller:
-HTTP  | Rotas   | Resultado
---------- | ------ | ------
-POST | localhost:8000/transferir/{senha} | Retorna uma String com o resultado da solicitação
-POST | localhost:8000/sacar/{senha} |Retorna uma String com o resultado da solicitação
-POST | localhost:8000/depositar/{senha}| Retorna uma String com o resultado da solicitação
+HTTP  | Rotas | RequestBody Models| Resultado
+--------- | ------ | ------ | ------
+POST | localhost:8000/transferir/{senha} | Transferencia | Retorna uma String com o resultado da solicitação
+POST | localhost:8000/sacar/{senha} | SacarDepositar |Retorna uma String com o resultado da solicitação
+POST | localhost:8000/depositar/{senha}| SacarDepositar | Retorna uma String com o resultado da solicitação
 
 ### Responses Examples
 
